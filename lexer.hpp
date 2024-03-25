@@ -12,6 +12,7 @@ enum class TokenType {
     INPUT,
     S_LOOP,
     E_LOOP,
+    SKIP,
     END
 };
 

@@ -17,8 +17,8 @@ Token Lexer::getNextToken() {
         case '-': return {TokenType::DEC_VAL, 1};
         case '.': return {TokenType::OUTPUT, 1};
         case ',': return {TokenType::INPUT, 1};
-        case '[': return {TokenType::S_LOOP, 0};
-        case ']': return {TokenType::E_LOOP, 0};
-        default: return Lexer::getNextToken();
+        case '[': return {TokenType::S_LOOP, 1};
+        case ']': return {TokenType::E_LOOP, 1};
+        default:  return {TokenType::SKIP,1 };
     }
 }
